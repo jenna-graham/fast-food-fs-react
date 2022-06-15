@@ -45,6 +45,15 @@ select {
   grid-template-rows: 1fr 1fr;
   border: solid 1px black;
 }
-
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.instruction {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
 

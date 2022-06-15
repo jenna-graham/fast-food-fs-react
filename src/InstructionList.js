@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function InstructionList({ instructions }) {
   return (
-    <section>
+    <section className="instruction">
       <h2>Your Instructions:</h2>
       <ul>
         {

@@ -4,9 +4,9 @@ export default function Food({ tea, savory, sweet }) {
   return (
     <div className="food">
 
-      <img src={`tea-${tea}.jpeg`} />
-      <img src={`savory-${savory}.jpg`} />
-      <img src={`sweet-${sweet}.jpeg`} />
+      <img src={`${tea}.jpeg`} />
+      <img src={`${savory}.jpg`} />
+      <img src={`${sweet}.jpeg`} />
     </div>
   );
 }

@@ -1,12 +1,13 @@
 import './App.css';
 import { useState } from 'react';
 import Food from './Food.js';
-import OrderNameInput from './OrderNameInput';
+import OrderNameInput from './OrderNameInput.js';
+import TheDropDowns from './TheDropDowns.js';
 
 function App() {
-  const [tea, setTea] = useState(1);
-  const [savory, setSavory] = useState(1);
-  const [sweet, setSweet] = useState(1);
+  const [tea, setTea] = useState('herbal');
+  const [savory, setSavory] = useState('toast');
+  const [sweet, setSweet] = useState('scone');
   const [orderName, setOrderName] = useState('Healthy Lunch!');
   const [instructions, setInstructions] = useState([]);
   const [instructionsInForm, setInstructionsInForm] = useState('');
@@ -20,7 +21,16 @@ function App() {
       />
       <h1>Order Name: {orderName}</h1>
       <div className="order-input">
-        <OrderNameInput setOrderName={setOrderName}/>
+        <OrderNameInput setOrderName={setOrderName} />
+        <section className="dropdowns">
+          <TheDropDowns 
+            setTea={setTea}
+            setSavory={setSavory}
+            setSweet={setSweet}
+          />
+          
+        </section>
+
       </div>
         
       

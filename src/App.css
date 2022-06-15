@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   align-items: center;
+  margin: 20px;
 }
 
 .App-header {
@@ -20,5 +21,30 @@ img {
   height: 200px;
   object-fit: cover;
 }
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input, select {
+  display: block;
+  margin: 5px 0px 5px 0px;
+  width: 200px;
+}
+select {
+  margin: 5px;
+  width: 200px;
+}
+.order-input {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border: solid 1px black;
+}
+
 
 

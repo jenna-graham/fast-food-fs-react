@@ -29,7 +29,8 @@ function App() {
         savory={savory}
         sweet={sweet}
       />
-      <h1>Order Name: {orderName}</h1>
+      <h1>Welcome to The Tea House!! <br></br>
+        Your order name: {orderName}</h1>
       <div className="order-input">
         <OrderNameInput setOrderName={setOrderName} />
         <section className="dropdowns">

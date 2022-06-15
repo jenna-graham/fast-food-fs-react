@@ -3,14 +3,24 @@ import { useState } from 'react';
 import Food from './Food.js';
 import OrderNameInput from './OrderNameInput.js';
 import TheDropDowns from './TheDropDowns.js';
+import InstructionForm from './InstructionForm.js';
+import InstructionList from './InstructionList';
 
 function App() {
   const [tea, setTea] = useState('herbal');
   const [savory, setSavory] = useState('toast');
   const [sweet, setSweet] = useState('scone');
-  const [orderName, setOrderName] = useState('Healthy Lunch!');
+  const [orderName, setOrderName] = useState('');
   const [instructions, setInstructions] = useState([]);
-  const [instructionsInForm, setInstructionsInForm] = useState('');
+  const [instructionInForm, setInstructionInForm] = useState('');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(instructionInForm);
+
+    setInstructions([...instructions, instructionInForm]);
+    setInstructionInForm('');
+  }
 
   return (
     <div className="App">
@@ -30,6 +40,9 @@ function App() {
           />
           
         </section>
+        <InstructionForm handleSubmit={handleSubmit} setInstructionInForm={setInstructionInForm} instructionInForm={instructionInForm}/>
+        <InstructionList instructions={instructions} />
+       
 
       </div>
         

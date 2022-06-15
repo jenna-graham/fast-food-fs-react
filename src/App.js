@@ -16,7 +16,6 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(instructionInForm);
 
     setInstructions([...instructions, instructionInForm]);
     setInstructionInForm('');
